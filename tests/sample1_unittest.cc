@@ -161,3 +161,7 @@ TEST(IsPrimeTest, Positive) {
 TEST(CLionTemplateTest, library_func_test1) {
   EXPECT_EQ(1, library_func());
 }
+
+TEST(CLionTemplateTest, library_func_test2) {
+  EXPECT_EQ(2, library_func());
+}

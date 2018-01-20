@@ -17,3 +17,7 @@ include_directories(../src)
 #link_directories($(CMAKE_BINARY_DIR)/src)
 find_library(NAMES my_shared_library)
 target_link_libraries(tests my_shared_library)
+
+# Run tests with ctest
+enable_testing()
+add_test(AllTests tests DEPENDS tests)
