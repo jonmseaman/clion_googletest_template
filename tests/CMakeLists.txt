@@ -11,3 +11,9 @@ include_directories(lib/googletest/googletest/include)
 include_directories(lib/googletest/googlemock/include)
 
 target_link_libraries(tests gtest gtest_main)
+
+# Link to code to test.
+include_directories(../src)
+#link_directories($(CMAKE_BINARY_DIR)/src)
+find_library(NAMES my_shared_library)
+target_link_libraries(tests my_shared_library)

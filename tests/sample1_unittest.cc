@@ -46,6 +46,11 @@
 #include <limits.h>
 #include "sample1.h"
 #include "gtest/gtest.h"
+
+extern "C" {
+#include "library.h"
+}
+
 namespace {
 
 // Step 2. Use the TEST macro to define your tests.
@@ -152,3 +157,7 @@ TEST(IsPrimeTest, Positive) {
 // Did you notice that we didn't register the tests?  The
 // RUN_ALL_TESTS() macro magically knows about all the tests we
 // defined.  Isn't this convenient?
+
+TEST(CLionTemplateTest, library_func_test1) {
+  EXPECT_EQ(1, library_func());
+}
